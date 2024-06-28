@@ -20,7 +20,12 @@ img {
     margin: 50px auto 20px auto;
     border-radius: 10px;
 }
-
+@media (max-width:767px) {
+    .progress {
+        margin-top: 50px;
+        float: right;
+    }
+}
 .progress-bar {
     background: #4a7fae;
     height: 100%;
@@ -52,7 +57,7 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
 
 .right {
     position: absolute;
-    top: 93%;
+    top: 106%;
     font-size: 45px;
     left: 10px;
     color: #4a7fae;
@@ -60,12 +65,11 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
     border: 2px solid #4a7fae;
     font-size: 30px;
     font-weight: 700;
-    border-radius: 10px;
 }
 
 .left {
     position: absolute;
-    top: 93%;
+    top: 106%;
     font-size: 45px;
     right: 10px;
     color: #4a7fae;
@@ -73,36 +77,38 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
     border: 2px solid #4a7fae;
     font-size: 30px;
     font-weight: 700;
-    border-radius: 10px;
 }
 
 @media (max-width:767px) {
     .left {
-        right: 0%;
+        right: 85%;
     }
-
+    
     .right {
-        left: 85%;
+        left: 0%;
     }
 }
 
 @media (min-width:768px) {
+    .left, .right {
+        top: 87%;
+    }
     .left {
-        right: 1%;
+        right: 92%;
     }
 
     .right {
-        left: 92%;
+        left: 1%;
     }
 }
 
 @media (min-width:1250px) {
     .left {
-        right: 1%;
+        right: 95%;
     }
 
     .right {
-        left: 95%;
+        left: 1%;
     }
 }
 
