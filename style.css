@@ -49,33 +49,50 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
     height: 100%;
 }
 
-.right {
-    position: absolute;
-    top: 87%;
-    font-size: 45px;
-    left: 10px;
-    color: #4a7fae;
-    text-decoration: none !important;
+@media (max-width:767px) {
+    body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container>div>div {
+        margin-left: 25px;
+    }
 }
 
 .left {
     position: absolute;
-    top: 87%;
+    top: 93%;
     font-size: 45px;
-    right: 10px;
     color: #4a7fae;
     text-decoration: none !important;
+    border: 2px solid #4a7fae;
+    left: 96%;
 }
 
-@media (min-width:767px) {
-    .left {
-        right: 10%;
-    }
+.right {
+    position: absolute;
+    top: 93%;
+    font-size: 45px;
+    color: #4a7fae;
+    text-decoration: none !important;
+    border: 2px solid #4a7fae;
+    left: 92%;
+}
 
+@media (max-width:768px) {
     .right {
-        left: 10%;
+        left: 87%;
+    }
+
+    .left {
+        left: 92%;
     }
 }
-body > div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container > div > div {
-    width: 80%;
+
+@media (max-width:425px) {
+    .right {
+        left: 80%;
+        top: 110%;
+    }
+
+    .left {
+        left: 90%;
+        top: 110%;
+    }
 }

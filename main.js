@@ -1,63 +1,39 @@
-// play progress
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     let sliderElement = document.querySelector('.uk-slider');
     let slider = UIkit.slider(sliderElement);
 
     let progressBar = document.querySelector('.progress-bar');
-    sliderElement.addEventListener('itemshown', function () {
+
+    function updateProgressBar() {
         let currentIndex = slider.index;
         let totalSlides = slider.slides.length;
         let progress = ((currentIndex + 1) / totalSlides) * 100;
-
         progressBar.style.width = `${progress}%`;
+    }
+
+    sliderElement.addEventListener('itemshown', function() {
+        updateProgressBar();
     });
-});
 
-// Control buttons right and left
-document.addEventListener('DOMContentLoaded', function () {
-    var sliderElement = document.querySelector('.uk-slider');
-    var slider = UIkit.slider(sliderElement);
+    document.querySelector('.right').addEventListener('click', function(e) {
+        e.preventDefault();
+        slider.show(slider.index - 1); 
+    });
 
-    var progressBar = document.querySelector('.progress-bar');
-
-    document.querySelector('.left').addEventListener('click', function (e) {
+    document.querySelector('.left').addEventListener('click', function(e) {
         e.preventDefault();
         slider.show(slider.index + 1);
     });
 
-    document.querySelector('.right').addEventListener('click', function (e) {
-        e.preventDefault();
-        slider.show(slider.index - 1);
-    });
-
-    sliderElement.addEventListener('itemshown', function () {
-        var currentIndex = slider.index;
-        var totalSlides = slider.slides.length;
-        var progress = ((currentIndex + 1) / totalSlides) * 100;
-        progressBar.style.width = progress + '%';
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var sliderElement = document.querySelector('.uk-slider');
-
-    // Initialize the UIkit slider with autoplay option
-    var slider = UIkit.slider(sliderElement, {
+    slider = UIkit.slider(sliderElement, {
         autoplay: {
-            delay: 1000, // Delay between slides in milliseconds (1 second)
-            enabled: true, // Autoplay enabled
-            pauseOnHover: false // Do not pause autoplay on hover
+            delay: 1000, 
+            enabled: true,
+            pauseOnHover: false
         }
     });
 
-    var progressBar = document.querySelector('.progress-bar');
-
-    // Update progress bar when slide changes
     sliderElement.addEventListener('itemshown', function() {
-        var currentIndex = slider.index;
-        var totalSlides = slider.slides.length;
-        var progress = ((currentIndex + 1) / totalSlides) * 100;
-        progressBar.style.width = progress + '%';
+        updateProgressBar();
     });
 });
