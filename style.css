@@ -48,51 +48,36 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
 #uk-slider-1>div>div {
     height: 100%;
 }
-
-@media (max-width:767px) {
-    body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container>div>div {
-        margin-left: 25px;
-    }
+.right {
+    position: absolute;
+    top: 93%;
+    font-size: 45px;
+    left: 10px;
+    color: #4a7fae;
+    text-decoration: none !important;
+    border: 2px solid #4a7fae;
 }
 
 .left {
     position: absolute;
     top: 93%;
     font-size: 45px;
+    right: 10px;
     color: #4a7fae;
     text-decoration: none !important;
     border: 2px solid #4a7fae;
-    left: 96%;
 }
 
-.right {
-    position: absolute;
-    top: 93%;
-    font-size: 45px;
-    color: #4a7fae;
-    text-decoration: none !important;
-    border: 2px solid #4a7fae;
-    left: 92%;
-}
-
-@media (max-width:768px) {
-    .right {
-        left: 87%;
-    }
-
+@media (min-width:767px) {
     .left {
-        left: 92%;
+        right: 10%;
+    }
+    .right {
+        left: 10%;
     }
 }
-
-@media (max-width:425px) {
-    .right {
-        left: 80%;
-        top: 110%;
-    }
-
-    .left {
-        left: 90%;
-        top: 110%;
+@media (max-width:767px) {
+    body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-container>div>div {
+        margin-left: 25px;
     }
 }
