@@ -37,3 +37,27 @@ document.addEventListener('DOMContentLoaded', function () {
         progressBar.style.width = progress + '%';
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var sliderElement = document.querySelector('.uk-slider');
+
+    // Initialize the UIkit slider with autoplay option
+    var slider = UIkit.slider(sliderElement, {
+        autoplay: {
+            delay: 1000, // Delay between slides in milliseconds (1 second)
+            enabled: true, // Autoplay enabled
+            pauseOnHover: false // Do not pause autoplay on hover
+        }
+    });
+
+    var progressBar = document.querySelector('.progress-bar');
+
+    // Update progress bar when slide changes
+    sliderElement.addEventListener('itemshown', function() {
+        var currentIndex = slider.index;
+        var totalSlides = slider.slides.length;
+        var progress = ((currentIndex + 1) / totalSlides) * 100;
+        progressBar.style.width = progress + '%';
+    });
+});
