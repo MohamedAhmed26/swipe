@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let progressBar = document.querySelector('.progress-bar');
 
     sliderElement.addEventListener('itemshown', function() {
-        let currentIndex = slider.index; // الفهرس الحالي للشريحة
+        let currentIndex = slider.index;
         let totalSlides = slider.slides.length;
         let progress = ((currentIndex + 1) / totalSlides) * 100;
 
