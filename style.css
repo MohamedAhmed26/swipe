@@ -17,15 +17,17 @@ img {
     background: #c9c8c8;
     width: 70%;
     height: 6px;
-    margin: 50px auto 20px auto;
+    margin: 48px auto 20px auto;
     border-radius: 10px;
 }
+
 @media (max-width:767px) {
     .progress {
         margin-top: 50px;
         float: right;
     }
 }
+
 .progress-bar {
     background: #4a7fae;
     height: 100%;
@@ -65,6 +67,8 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
     border: 2px solid #4a7fae;
     font-size: 30px;
     font-weight: 700;
+    width: 49px;
+    text-align: center;
 }
 
 .left {
@@ -77,13 +81,15 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
     border: 2px solid #4a7fae;
     font-size: 30px;
     font-weight: 700;
+    width: 49px;
+    text-align: center;
 }
 
 @media (max-width:767px) {
     .left {
-        right: 85%;
+        right: 71%;
     }
-    
+
     .right {
         left: 0%;
     }
@@ -93,22 +99,23 @@ body>div.uk-position-relative.uk-visible-toggle.uk-light.uk-slider.uk-slider-con
     .left, .right {
         top: 87%;
     }
+
     .left {
-        right: 92%;
+        right: 85%;
     }
 
     .right {
-        left: 1%;
+        left: 0%;
     }
 }
 
 @media (min-width:1250px) {
     .left {
-        right: 95%;
+        right: 86%;
     }
 
     .right {
-        left: 1%;
+        left: 6%;
     }
 }
 
